@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Blogs header font*/
+.blog-name {
+  font-family: 'Niconne', cursive;
+  font-size: 60px;
+  margin-bottom: -40px;
+}
+
+/*Blog sub header*/
+.blog-subheader {
+    font-family: 'Niconne', cursive;
+    font-size: 25px;
+    text-transform: lowercase;
+}
+
+/* Add a gray background color with some padding */
+body {
+    font-family: Arial;
+    padding: 20px;
+    /* background: #ffffff; */
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding-top: 1px;
+    padding-right: 30px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  text-align: center;
+     /* background-color: #f1f1f1; */
+     background-color: #ffffff;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Blog card start*/
+/* blog card title*/
+.latest-blog-title {
+  font-family: 'Dancing Script', cursive;
+  text-transform: uppercase;
+}
+
+/* This is the place holder space that will kept till the title is fetched from the backend*/
+.placeholder_blog_title {
+width : 100%;
+/* background-color: #808080; */
+background-color: #D3DCE2;
+border-radius: 100px;
+}
+
+/* Placeholder for description and date*/
+.placeholder-blog-date {
+  width : 25%;
+  /* background-color: #A9A9A9; */
+  border-radius: 100px;
+  background-color: #F0F4F6;
+}
+
+/* Latest blog image */
+.latest-blog-img {
+  width: 100%;
+    max-width: 100%;
+    height: 300px;
+}
+
+/* Place holder for blog image*/
+.placeholder-blog-img {
+  width: 100%;
+    max-width: 100%;
+    height: 300px;
+    /* background-color: #A9A9A9; */
+    background-color: #F0F4F6;
+}
+
+/* Placeholder for preview*/
+.placeholder-blog-preview {
+  width: 100%;
+    max-width: 100%;
+    height: 100px;
+    font-family: 'Philosopher', sans-serif;
+    background-color: #F0F4F6;
+}
+
+/* Blog preview*/
+.blog-preview-div {
+  margin-top: 10px;
+}
+
+placeholder-read-more {
+  background-color: #F0F4F6;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.read-more-btn {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  border:none;
+  visibility: hidden;
+}
+
+/* .placeholder {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    position: relative;
+} */
+/* Blog card end */
