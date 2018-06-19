@@ -2,7 +2,7 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
