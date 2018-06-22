@@ -8,66 +8,107 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Philosopher" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<style>
+.bstimeslider {
+
+width:500px;
+height:40px;
+background:#ccc;
+position:relative;    
+}
+
+.bktibx {
+
+float:left;
+margin:0 40px 0 0 ;
+font-size:18px;
+width:60px;
+display:block;
+background:#000;
+color:#fff;
+
+}
+
+#tslshow {
+position:absolute;
+left:0;
+width:1200px;
+
+}
+
+#leftArrow {
+
+width:40px;
+height:40px;
+background:#ff0000; 
+position:absolute;
+left:0px;
+}
+
+#rightArrow {
+
+width:40px;
+height:40px;
+background:#ff0000; 
+position:absolute;
+right:0px;
+}
+
+#viewContainer {
+width:360px;
+height:100%;
+background:#00ff00;
+position:absolute;
+left:50%;
+margin-left:-180px;
+overflow:hidden; 
+}
+</style>
+
+
 </head>
+
 <body>
 
-<div class="header">
-  <h2 class='blog-name'>Avril D'souza</h2>
-  <p class='blog-subheader'>-- few words --</p>
+<div class="bstimeslider">
+    <div id="rightArrow"></div>
+        <div id="viewContainer">
+            <div id="tslshow">
+                <div class="bktibx"> 12:00   </div>
+                <div class="bktibx"> 12:30   </div>
+                <div class="bktibx"> 13:00   </div>
+                <div class="bktibx"> 13:30   </div>
+                <div class="bktibx"> 14:00   </div>
+                <div class="bktibx"> 14:30   </div>
+                <div class="bktibx"> 15:00   </div>
+                <div class="bktibx"> 15:30   </div>
+                <div class="bktibx"> 16:00   </div>
+                <div class="bktibx"> 16:30   </div>
+                <div class="bktibx"> 17:00   </div>
+                <div class="bktibx"> 17:30   </div>
+             </div>
+        </div>
+        <div id="leftArrow"></div>
 </div>
+<script>
+var view = $("#tslshow");
+var move = "100px";
+var sliderLimit = -750
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <div class="placeholder_blog_title placeholder"><h2 id="latest-blog1-title" class="latest-blog-title">&nbsp;</h2></div>
-      <h5 class="placeholder-blog-date placeholder"><span id="latest-blog1-description">&nbsp;</span><span id="latest-blog1-date">&nbsp;</span></h5>
-      <div class="placeholder-blog-img placeholder"><img id="latest-blog1-img" class="latest-blog-img"/></div>
-      <div class="placeholder-blog-preview placeholder blog-preview-div">
-        <p id="latest-blog1-preview"></p>
-      </div>
-      <div class="placeholder-read-more">
-        <button type="button" class="read-more-btn">Read More</button>
-      </div>
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+$("#rightArrow").click(function(){
+    
+    var currentPosition = parseInt(view.css("left"));
+    if (currentPosition >= sliderLimit) view.stop(false,true).animate({left:"-="+move},{ duration: 400})
 
-    </div>
+});
 
-    <div class="card">
-      <div class="placeholder_blog_title placeholder"><h2 id="latest-blog2-title" class="latest-blog-title">&nbsp;</h2></div>
-      <h5 class="placeholder-blog-date placeholder"><span id="latest-blog2-description">&nbsp;</span><span id="latest-blog2-date">&nbsp;</span></h5>
-      <div class="placeholder-blog-img placeholder"><img id="latest-blog2-img" class="latest-blog-img"/></div>
-      <div class="placeholder-blog-preview placeholder blog-preview-div">
-        <p id="latest-blog2-preview"></p>
-      </div>
-      <div class="placeholder-read-more">
-        <button type="button" class="read-more-btn">Read More</button>
-      </div>
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+$("#leftArrow").click(function(){
 
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
+    var currentPosition = parseInt(view.css("left"));
+    if (currentPosition < 0) view.stop(false,true).animate({left:"+="+move},{ duration: 400})
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
- <script src="javascript/common.js"></script>
+});
+</script>
 </body>
 </html>

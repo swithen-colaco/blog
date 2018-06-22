@@ -63,6 +63,9 @@ body {
      margin-top: 20px;
 }
 
+.row {
+  position: relative;
+}
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -113,14 +116,14 @@ border-radius: 100px;
 .latest-blog-img {
   width: 100%;
     max-width: 100%;
-    height: 300px;
+    height: 250px;
 }
 
 /* Place holder for blog image*/
 .placeholder-blog-img {
   width: 100%;
     max-width: 100%;
-    height: 300px;
+    height: 250px;
     /* background-color: #A9A9A9; */
     background-color: #F0F4F6;
 }
@@ -143,6 +146,20 @@ placeholder-read-more {
   background-color: #F0F4F6;
 }
 
+.mini-blog-img {
+  width: 100%;
+    max-width: 100%;
+    height: 150px;
+}
+
+.placeholder-mini-blog-img {
+  width: 100%;
+    max-width: 100%;
+    height: 150px;
+    /* background-color: #A9A9A9; */
+    background-color: #F0F4F6;
+}
+
 .dot {
   height: 7px;
   width: 7px;
@@ -162,6 +179,7 @@ placeholder-read-more {
 }
 
 .read-more-btn {
+  cursor: pointer;
   color: white;
   background-color: black;
   padding: 5px;
@@ -180,3 +198,115 @@ placeholder-read-more {
     position: relative;
 } */
 /* Blog card end */
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+
+/* Next & previous buttons */
+#previous-button {
+  float: left;
+  margin-left: 5px;
+  width: 70px;
+}
+
+#next-button {
+  float: right;
+  margin-right: 5px;
+  width: 70px;
+}
+
+#previous-button:hover, #next-button:hover {
+    cursor: pointer;
+}
+.prev {
+  left: 0px;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Social media*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
